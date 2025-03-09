@@ -1,0 +1,1 @@
+swag init -g ./pkg/handlers/http/handler.go

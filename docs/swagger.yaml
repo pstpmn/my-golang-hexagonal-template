@@ -1,0 +1,34 @@
+info:
+  contact: {}
+paths:
+  /v1/user/{userId}:
+    get:
+      consumes:
+      - application/json
+      description: get users with userId from database
+      operationId: get-user-with-userId
+      parameters:
+      - description: userId
+        in: path
+        name: userId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses: {}
+      summary: get user
+      tags:
+      - Users
+  /v1/users:
+    get:
+      consumes:
+      - application/json
+      description: get all users from database
+      operationId: get-users
+      produces:
+      - application/json
+      responses: {}
+      summary: get users
+      tags:
+      - Users
+swagger: "2.0"

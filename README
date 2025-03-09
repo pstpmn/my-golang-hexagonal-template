@@ -1,0 +1,27 @@
+ORDER SERVICE
+
+Functions
+  Order Service
+  - Get OrderStatus (large traffic get order from redis only don't queue database)
+  - Create Order (create mongo and cache in redis for accepted traffic api getOrder)
+  - Load Order data to cache
+  - Cancel Cache Order
+  Note : deploy to app platform digitalocean 
+
+  Order Mapping
+  - Process Transaction
+  - Mapping Transaction And Order
+    workflow
+      first process transaction accept from message queues ,
+      second verify transaction from auto platform in cache redis 
+      third save to mongoDb and update cache redis
+      fourth send notify to webhook service
+  Note : deploy to app platform digitalocean 
+
+schema
+
+
+example end point
+- ้GET https://order.autoplatf.com/v1/order/:refId
+- ้GET https://order.autoplatf.com/v1/order/history
+- ้POST https://order.autoplatf.com/v1/order

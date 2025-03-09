@@ -1,0 +1,1 @@
+# my-golang-hexagonal-template
