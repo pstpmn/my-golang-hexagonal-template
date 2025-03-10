@@ -1,4 +1,4 @@
-package orderEntity
+package userEntity
 
 import (
 	"time"
