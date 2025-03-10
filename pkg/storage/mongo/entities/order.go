@@ -6,7 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-type OrderEntity struct {
+type UserEntity struct {
 	ObjectId  primitive.ObjectID `bson:"_id,omitempty" json:"_id"`
 	Name      string             `bson:"name" json:"name"`
 	Email     string             `bson:"email" json:"email"`

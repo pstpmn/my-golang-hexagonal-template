@@ -23,5 +23,7 @@ go.work.sum
 
 # env file
 .env
+
 # different commit name
 diff.txt
+diff_output.txt
