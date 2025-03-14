@@ -25,9 +25,9 @@ const (
 // apiCmd represents the API server command.
 var apiCmd = &cobra.Command{
 	Use:   "api",
-	Short: "Start the Order Autoplatf API server",
-	Long: `Launches the Order Autoplatf API server, providing endpoints for user management
-and order processing. Requires a MongoDB connection and environment configuration.`,
+	Short: "Start the API server",
+	Long: `Launches the API server, providing endpoints for user management 
+	and order processing. Requires a MongoDB connection and environment configuration.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		if err := runAPI(); err != nil {
 			log.Fatalf("API startup failed: %v", err)
@@ -72,7 +72,6 @@ func runAPI() error {
 	userUseCase := usecase.NewUserUseCase(userRepo)
 	handler := httpHandler.NewUserHandler(userUseCase)
 
-	fmt.Println(cfg.App)
 	// Start the server
 	router := httpHandler.NewRouter(cfg.App, handler, middleware)
 	router.Serve()

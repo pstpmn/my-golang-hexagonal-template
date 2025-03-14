@@ -27,4 +27,3 @@ COPY --from=builder /app/app /app/app
 
 EXPOSE 3000
 CMD ["/app/app", "api"]
-

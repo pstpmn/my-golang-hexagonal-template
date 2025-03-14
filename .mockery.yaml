@@ -1,0 +1,3 @@
+all: true
+output: internal/mocks
+dir: internal/core/port

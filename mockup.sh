@@ -1,0 +1,1 @@
+mockery --config=.mockery.yaml
